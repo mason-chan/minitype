@@ -27,18 +27,6 @@ function App() {
     });
   };
 
-  // set different fonts
-  const [font, setFont] = useState("mono")
-  const fonts = ["mono", "sans", "serif"];
-
-  const renderFonts = (fonts: string[]) => {
-    return fonts.map((font: string, index: number) => {
-      return (
-        <li key={index} onClick={() => setFont(font)} className="cursor-pointer list-none mx-1 text-primary hover:text-third">{font}</li>
-      )
-    })
-  }
-
   useEffect(() => {
     document.body.classList.add(theme);
     document.body.classList.add("bg-secondary");
@@ -47,10 +35,22 @@ function App() {
     };
   }, [theme]);
 
+  // set different fonts
+  const [font, setFont] = useState("font-mono")
+  const fonts = ["font-mono", "font-sans", "font-serif"];
+
+  const renderFonts = (fonts: string[]) => {
+    return fonts.map((font: string, index: number) => {
+      return (
+        <li key={index} onClick={() => setFont(font)} className="cursor-pointer list-none mx-1 text-primary hover:text-third">{font.slice(5)}</li>
+      )
+    })
+  }
+
   useEffect(() => {
-    document.body.classList.add("font-" + font);
+    document.body.classList.add(font);
     return () => {
-      document.body.classList.remove("font-" + font);
+      document.body.classList.remove(font);
     }
   }, [font])
 
