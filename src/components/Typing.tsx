@@ -107,11 +107,11 @@ const TypeInput: FC<{ text: string }> = ({ text }) => {
             let state = charsState[index];
             let styling = "text-red-500";
             if (shouldHighlight) {
-              styling = "text-primary underline decoration-third";
+              styling = "text-third";
             } else if (state === 0) {
               styling = "text-primary";
             } else if (state === 1) {
-              styling = "text-third";
+              styling = "text-third/50";
             }
             return (
               <span key={letter + index} className={`${styling}`}>
@@ -140,8 +140,8 @@ const TypeInput: FC<{ text: string }> = ({ text }) => {
             autoCorrect="off"
             autoCapitalize="off"
             spellCheck={false}
-            className={`focus:outline-none mr-8 placeholder-secondary px-2 border-b-0 bg-primary text-secondary w-full rounded-xl border-${
-              !typingInput.length ? "secondary" : typedWrong ? "red" : "green"
+            className={`focus:outline-none mr-8 placeholder-secondary px-2 border-b-0 bg-primary text-secondary w-full rounded-xl text-${
+              !typingInput.length ? "primary" : typedWrong ? "red" : "secondary"
             }-500`}
             placeholder={phase !== 1 ? "click clack" : ""}
           />
