@@ -4,7 +4,7 @@ import words from "./components/words.json";
 import "./App.css";
 
 function App() {
-  let [count, setCount] = useState(100);
+  let [count, setCount] = useState(50);
   let forceUpdate = UpdateWords();
   let randomText = RandomWord(words).join(" ");
   let wordCount = randomText.split(" ").length;
@@ -36,23 +36,29 @@ function App() {
   }, [theme]);
 
   // set different fonts
-  const [font, setFont] = useState("font-mono")
+  const [font, setFont] = useState("font-mono");
   const fonts = ["font-mono", "font-sans", "font-serif"];
 
   const renderFonts = (fonts: string[]) => {
     return fonts.map((font: string, index: number) => {
       return (
-        <li key={index} onClick={() => setFont(font)} className="cursor-pointer list-none mx-1 text-primary hover:text-third">{font.slice(5)}</li>
-      )
-    })
-  }
+        <li
+          key={index}
+          onClick={() => setFont(font)}
+          className="cursor-pointer list-none mx-1 text-primary hover:text-third"
+        >
+          {font.slice(5)}
+        </li>
+      );
+    });
+  };
 
   useEffect(() => {
     document.body.classList.add(font);
     return () => {
       document.body.classList.remove(font);
-    }
-  }, [font])
+    };
+  }, [font]);
 
   function RandomWord(array: any) {
     let currentIndex = array.length,
@@ -67,12 +73,12 @@ function App() {
       ];
     }
     return array.slice(0, count);
-  };
+  }
 
   function UpdateWords() {
     let [value, setValue] = useState(true);
     return () => setValue(!value);
-  };
+  }
 
   const handleKeyDown = (letter: string, control: boolean) => {
     if (letter === "Enter") {
@@ -83,7 +89,7 @@ function App() {
   function changeWordCount(number: number) {
     setCount(number);
     forceUpdate();
-  };
+  }
 
   return (
     <div className="flex flex-col">
@@ -92,6 +98,7 @@ function App() {
           <a
             href="/"
             className="relative z-10 flex items-center w-auto text-2xl font-extrabold leading-none select-none text-primary"
+            tabIndex={-1}
           >
             minitype
           </a>
@@ -103,6 +110,7 @@ function App() {
                   changeWordCount(10);
                 }}
                 className="mr-2.5 text-primary hover:text-third"
+                tabIndex={-1}
               >
                 10
               </button>
@@ -111,6 +119,7 @@ function App() {
                   changeWordCount(25);
                 }}
                 className="mr-2.5 text-primary hover:text-third"
+                tabIndex={-1}
               >
                 25
               </button>
@@ -119,6 +128,7 @@ function App() {
                   changeWordCount(50);
                 }}
                 className="mr-2.5 text-primary hover:text-third"
+                tabIndex={-1}
               >
                 50
               </button>
@@ -127,6 +137,7 @@ function App() {
                   changeWordCount(100);
                 }}
                 className="text-primary hover:text-third"
+                tabIndex={-1}
               >
                 100
               </button>
@@ -153,12 +164,21 @@ function App() {
         </div>
       </div>
       <div className="text-primary max-w-3xl text-center fixed left-1/2 bottom-40 -translate-x-2/4">
-        <p className="mb-5"><span className="bg-primary text-secondary rounded-md border-4 border-primary">tab</span> + <span className="bg-primary text-secondary rounded-md border-4 border-primary">enter</span> to reset test</p>
+        <p className="mb-5">
+          <span className="bg-primary text-secondary rounded-md border-4 border-primary">
+            tab
+          </span>{" "}
+          +{" "}
+          <span className="bg-primary text-secondary rounded-md border-4 border-primary">
+            enter
+          </span>{" "}
+          to reset test
+        </p>
         <p>press redo to reset current test</p>
       </div>
       <div className="text-primary absolute bottom-0 w-full px-8">
         <div className="container flex flex-col items-center py-8 mx-auto max-w-3xl sm:flex-row">
-          <a href="/" className="text-xl leading-none select-none">
+          <a href="/" className="text-xl leading-none select-none" tabIndex={-1}>
             minitype
           </a>
           <p className="mt-4 pt-1 text-sm sm:ml-4 sm:pl-4 sm:mt-0">
@@ -168,6 +188,7 @@ function App() {
             <a
               href="https://www.instagram.com/mach_keys/"
               className="hover:text-third"
+              tabIndex={-1}
             >
               <span className="sr-only">Instagram</span>
               <svg
@@ -183,7 +204,7 @@ function App() {
                 ></path>
               </svg>
             </a>
-            <a href="https://github.com/mctekno" className="hover:text-third">
+            <a href="https://github.com/mctekno" className="hover:text-third" tabIndex={-1}>
               <span className="sr-only">GitHub</span>
               <svg
                 className="w-6 h-6"
