@@ -3,7 +3,7 @@
 
 Minitype is a minimalistic typing test website. 
 
-[View live here!](https://mctekno.github.io/minitype)
+[View live here!](https://mctekno.github.io/minitype) (Please use on PC or larger tablets)
 
 ![Minitype](src/components/minitype.png?raw=true)
 
