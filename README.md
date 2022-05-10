@@ -23,4 +23,4 @@ There was one functionality that I wish I could have incorporated into the websi
 
 ## Project Status
 
-This project is essentially complete and playable. The only thing that was not added was the ability to save the user's overall test settings on a new page load, as the route that I went with currently has set defaults for the theme and word count on load. 
+This project is essentially complete and playable. The only thing that was not added was the ability to save the user's overall test settings on a new page load, as the route that I went with currently has set defaults for the theme and word count on load. I also did not incorporate mobile use as 99% of the time, typing tests are conducted on a PC/Laptop and I wanted to focus more on the main functions of the website.
