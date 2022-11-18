@@ -3,13 +3,13 @@
 
 Minitype is a minimalistic typing test website. 
 
-[View live here!](https://mctekno.github.io/minitype)
+[View live here!](https://mctekno.github.io/minitype) (Please use on PC or larger tablets)
 
 ![Minitype](src/components/minitype.png?raw=true)
 
 ## Purpose 
 
-This project was created due to the interest I have in custom mechanical keyboards. Before venturing into the hobby, I used to think that I typed at a decent speed, above the universal average, but also knew that I did not type the 'proper' way. After I built my first custom mechanical keyboard, I started to learn how to touch type with all my fingers, and eventually it became second nature and I was able to reach my previous average words per minute. Since then, I challeneged myself to get faster and faster, so every day I spent some time doing typing tests to see how high I can get that day, and also to just enjoy my custom keyboard builds. 
+This project was created due to the interest I have in custom mechanical keyboards. Before venturing into the hobby, I used to think that I typed at a decent speed, above the universal average, but also knew that I did not type the 'proper' way. After I built my first custom mechanical keyboard, I started to learn how to touch type with all my fingers, and eventually it became second nature and I was able to reach my previous average words per minute. Since then, I challenged myself to get faster and faster, so every day I spent some time doing typing tests to see how high I can get that day, and also to just enjoy my custom keyboard builds. 
 
 This practice definitely payed off, as now I can average about 140 WPM and easily type over 100 WPM when I'm not trying. Before all this practice my highest WPM would probably be around 80 WPM. The website that I mained was monkeytype, and is still currently my favorite typing test website, but I've also used other sites like 10fastfingers and typing.com. I thought it would be a great project idea if I could make a typing test of my own, albiet not as nice as monkeytype. 
 
@@ -23,4 +23,4 @@ There was one functionality that I wish I could have incorporated into the websi
 
 ## Project Status
 
-This project is essentially complete and playable. The only thing that was not added was the ability to save the user's overall test settings on a new page load, as the route that I went with currently has set defaults for the theme and word count on load. 
+This project is essentially complete and playable. The only thing that was not added was the ability to save the user's overall test settings on a new page load, as the route that I went with currently has set defaults for the theme and word count on load. I also did not incorporate mobile use as 99% of the time, typing tests are conducted on a PC/Laptop and I wanted to focus more on the main functions of the website.
