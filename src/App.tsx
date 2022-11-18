@@ -204,7 +204,7 @@ function App() {
                 ></path>
               </svg>
             </a>
-            <a href="https://github.com/mctekno/minitype" className="hover:text-third" tabIndex={-1}>
+            <a href="https://github.com/mason-chan/minitype" className="hover:text-third" tabIndex={-1}>
               <span className="sr-only">GitHub</span>
               <svg
                 className="w-6 h-6"
